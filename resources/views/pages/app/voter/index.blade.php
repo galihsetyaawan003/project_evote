@@ -39,15 +39,15 @@
                                         
                                         <td>
 
-                                            @can('user-update')
-                                                <a href="{{ route('app.user.edit', $user->id) }}"
+                                            @can('voter-update')
+                                                <a href="{{ route('app.voter.edit', $voter->id) }}"
                                                     class="btn btn-warning">Edit</a>
                                             @endcan
 
-                                            <a href="{{ route('app.user.show', $user->id) }}" class="btn btn-info">Show</a>
+                                            <a href="{{ route('app.voter.show', $voter->id) }}" class="btn btn-info">Show</a>
 
-                                            @can('user-delete')
-                                                <form action="{{ route('app.user.destroy', $user->id) }}" method="POST"
+                                            @can('voter-delete')
+                                                <form action="{{ route('app.voter.destroy', $voter->id) }}" method="POST"
                                                     class="d-inline">
                                                     @csrf
                                                     @method('DELETE')
