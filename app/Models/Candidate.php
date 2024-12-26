@@ -18,4 +18,10 @@ class Candidate extends Model
         'mission',
         'sort_order'
     ];
+
+    // 1 candidate dapat memiliki banyak vote
+    public function votes()
+    {
+       return $this->hasMany(Vote::class);
+    }
 }

@@ -19,4 +19,11 @@ class Voter extends Model
     {
        return $this->belongsTo(User::class);
     }
+
+    // 1 voter hanya boleh 1 vote
+    public function vote()
+    {
+       return $this->hasOne(Vote::class);
+    }
+
 }
