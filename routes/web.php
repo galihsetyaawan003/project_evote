@@ -19,6 +19,8 @@ Route::group(['prefix' => 'app', 'as' => 'app.', 'middleware' => 'auth'], functi
    // Route::resource('voter',VoterController::class);
     Route::resource('voter',VoterController::class);
 
+    Route::get('/vote/{candidate}', [DashboardController::class, 'vote'])->name('vote');
+
     Route::resource('role', RoleController::class);
     Route::resource('user', UserController::class);
 });
